@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>cache</module>
-        <module>autolog</module>
+        <module>auditlog</module>
         <module>security</module>
     </modules>
 
