@@ -14,14 +14,137 @@
         <module>common</module>
         <module>utils</module>
     </modules>
-
-    <dependencies>
-
-    </dependencies>
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.2.RELEASE</version>
+        <relativePath/>
+    </parent>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <commons-lang3.version>3.3.2</commons-lang3.version>
+        <commons-io.version>2.11.0</commons-io.version>
+        <com.yibat-common.version>1.0-SNAPSHOT</com.yibat-common.version>
+        <com.yibat-core.version>1.0-SNAPSHOT</com.yibat-core.version>
+        <com.yibat-ext.version>1.0-SNAPSHOT</com.yibat-ext.version>
+        <com.yibat-utils.version>1.0-SNAPSHOT</com.yibat-utils.version>
+        <commons-fileupload.version>1.3.3</commons-fileupload.version>
+        <org.slf4j.version>1.7.35</org.slf4j.version>
+        <org.apache.poi.version>5.0.0</org.apache.poi.version>
     </properties>
+    <dependencies>
+        <!--yibat-common组件-->
+        <dependency>
+            <groupId>com.yibat</groupId>
+            <artifactId>exception</artifactId>
+            <version>${com.yibat-common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yibat</groupId>
+            <artifactId>generator</artifactId>
+            <version>${com.yibat-common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yibat</groupId>
+            <artifactId>metadata</artifactId>
+            <version>${com.yibat-common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yibat</groupId>
+            <artifactId>sequence</artifactId>
+            <version>${com.yibat-common.version}</version>
+        </dependency>
+        <!--yibat-core组件-->
+        <dependency>
+            <groupId>com.yibat</groupId>
+            <artifactId>auditlog</artifactId>
+            <version>${com.yibat-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yibat</groupId>
+            <artifactId>cache</artifactId>
+            <version>${com.yibat-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yibat</groupId>
+            <artifactId>security</artifactId>
+            <version>${com.yibat-core.version}</version>
+        </dependency>
+        <!--yibat-ext组件-->
+        <dependency>
+            <groupId>com.yibat</groupId>
+            <artifactId>redis</artifactId>
+            <version>${com.yibat-ext.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yibat</groupId>
+            <artifactId>sharding</artifactId>
+            <version>${com.yibat-ext.version}</version>
+        </dependency>
+        <!--yibat-utils组件-->
+        <dependency>
+            <groupId>com.yibat</groupId>
+            <artifactId>base</artifactId>
+            <version>${com.yibat-utils.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yibat</groupId>
+            <artifactId>crypt</artifactId>
+            <version>${com.yibat-utils.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yibat</groupId>
+            <artifactId>signature</artifactId>
+            <version>${com.yibat-utils.version}</version>
+        </dependency>
+
+
+        <!-- Spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>${commons-fileupload.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${org.apache.poi.version}</version>
+        </dependency>
+
+    </dependencies>
 
 </project>
